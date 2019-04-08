@@ -21,7 +21,7 @@ def run(url=None, path=DEFAULT_PATH, prefix="video"):
     if not url or not isinstance(url, str):
         raise ValueError("Invalid URL.")
     if not os.path.isdir(path):
-        raise RuntimeError("Invalid directory: {}.".format(path))
+        raise RuntimeError("Please create the following directory: {}.".format(path))
     y = YouTube(url)
     y = y.streams
     y = y.filter(subtype='mp4')
